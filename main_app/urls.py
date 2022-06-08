@@ -1,6 +1,8 @@
 from django.urls import path
-ftom . import views
+from . import views
 
 urlpatterns = [
-  path('', views.Home.as_view(), name="home") 
+  path('', views.Home.as_view(), name="home"),
+  path('about/', views.About.as_view(), name="about"),
+  path('cats/', views.CatList.as_view(), name="cat_list"),
 ]
