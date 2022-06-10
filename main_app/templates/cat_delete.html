@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> Are you sure that you want to delete {{cat.breed}}?</h1>
+ <form method ="post">
+     {% csrf_token %}
+     <input type="submit" value="Confirm" />
+     <a href="/cats/{{cat.id}}"> Cancel, I changed my mind </a>
+</form>
+{% endblock %}

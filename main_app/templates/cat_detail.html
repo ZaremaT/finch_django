@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %} 
+{% if cat.verified_cat %}
+<h2>This is a verified cats</h2>
+{% endif %}
+<h1> This is my show page for {{cat.breed}}</h1>
+<img src="{{cat.img}}" alt="{{cat.breed}}" />
+<a href="/cats/{{cat.id}}/update"> Edit this cat</a>
+<a href="/cats/{{cat.id}}/delete"> Delete this cat</a>
+<h4>{{cat.description}}</h4>
+
+{% endblock %}

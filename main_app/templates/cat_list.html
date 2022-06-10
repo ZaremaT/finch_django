@@ -4,7 +4,9 @@
 {% block content %}
 <h1> This is the Cats list page </h1>
 {% for cat in cats %}
-<h3>{{cat.breed}}</h3>
+<a href="{{cat.id}}" >
+ <h3>{{cat.breed}}</h3>
+</a>
 <p> {{cat.description}}</p>
 <img src ="{{cat.img}}" alt="{{cat.breed}}" />
 {% endfor %}
